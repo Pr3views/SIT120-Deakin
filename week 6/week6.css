@@ -1,0 +1,8 @@
+input {
+    margin-left: 10px;
+    width: 50px;
+  }
+  
+input[type=submit] {
+    width: 100px;
+  }

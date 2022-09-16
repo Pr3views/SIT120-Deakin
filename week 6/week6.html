@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>User name</p>
+        <input v-model="name" type="text" placeholder="Please enter your username" />
+        <br>
+        Local data: {{name}}
+        <br>
+        <p>password</p>
+        <input v-model="password" type="password" placeholder="Please enter password" />
+        <br>
+        Local data: {{password}}
+        <br>
+ 
+    </div>
+
+    <p1>
+        <div class="vue">
+            <p>How are you feeling today?</p>
+            <label>
+              <input type="radio" value="great" v-model="howAreYouFeeling" />
+              great
+            </label>
+            <label>
+              <input type="radio" value="wonderful" v-model="howAreYouFeeling" />
+              wonderful
+            </label>
+            <label>
+              <input type="radio" value="fantastic" v-model="howAreYouFeeling" />
+              fantastic
+            </label>
+            <p>I am also feeling <em>{{howAreYouFeeling}}</em> today.</p>
+        </div>
+    </p1>
+</body>
+
+
+
+
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            name: 'Jake',
+            password: 'password'
+
+        }
+    })
+</script>
+
+<script>
+    new Vue({
+    el: ".vue",
+    data() {
+        return {
+        howAreYouFeeling: "great"
+        };
+    }
+    });
+
+</script>

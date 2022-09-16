@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Properties</h2>
+
+<p>The length property returns the length of a string:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+</script>
+
+
+<p id="demo2">
+<script>
+    let str = "One, Two, Three, Four, Five";
+    document.getElementById("demo2").innerHTML = str.slice(5, 15);
+</script>
+</p>
+
+<p id="demo3">
+<script>
+    let scamMessage = "Your computer is infected!";
+    document.getElementById("demo3").innerHTML = scamMessage.replace("infected", "safe");
+</script>
+</p>
+
+<p id="demo4">
+<script>
+    let text1 = "Hello";
+    let text2 = "World!";
+    let text3 = text1.concat(" ",text2);
+    document.getElementById("demo4").innerHTML = text3;
+</script>
+</p>
+
+
+<p>
+    The code charCodeAt method returns the unicode of the character given at the 3rd position of the string: 
+</p>
+<p id="demo5"></p> 
+<script>
+    let alphabet = "MEME";
+    
+    document.getElementById("demo5").innerHTML = alphabet.charCodeAt(0);
+</script>
+</body>
+</html>
+

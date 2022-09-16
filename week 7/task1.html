@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+<body>
+    <div id="globalcomponent">
+        <custom-article v-bind:content="datacontent"> </custom-article>
+    </div>
+    <div id="localcomponent">
+        <my-local-component></my-local-component>
+    </div>
+    <script>
+        Vue.component('custom-article', {
+            props: ['content'],
+            template: '<article>{{content}}</article>'
+        })
+        new Vue({
+            el: '#globalcomponent',
+            data: {
+                datacontent:
+                'This is a global component'
+            }
+        })
+
+        var localComponent = {
+            data: function()
+            {
+                return{
+                    datacontent: 'This is a local component'
+                }
+            },
+            template: '<p>{{datacontent}}</p>'
+        }
+
+        new Vue({
+            el: '#localcomponent',
+            components: {
+                'my-local-component': localComponent,
+            }
+        })
+    </script>
+</body>
+</html>
