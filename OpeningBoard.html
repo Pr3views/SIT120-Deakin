@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chess</title>
+
+    </head>
+
+        <script src="https://unpkg.com/vue@3.0.2"></script>
+        <body>
+            <div id="chessApp">
+                <div v-if="showOpening">
+                  <ul>
+                    <li v-for="item in openings">
+                      <h3>{{ item.openName }}</h3>
+                      <p>{{ item.moveOrder }}</p>
+          
+                    </li>
+                  </ul>
+                </div>
+                <button @click="toggleShowOpening">
+                  <span v-if="showOpening">Hide Opening</span>
+                  <span v-else>Show Opening</span>
+                </button>
+                <div v-show="showOpening">currently showing openings</div>
+
+
+
+
+              </div>
+  
+        </body>
+        <script src="chessApp.js"></script>
+
+    </body>
+</html>

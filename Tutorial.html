@@ -1,0 +1,85 @@
+<html>
+
+<body>
+    
+  <div id="Page1">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Daniel Smith">
+        
+
+
+
+            <body>
+                <div class="title">
+                    <style>
+                        div {
+                          text-align: left;
+                        }
+                    </style>
+                    <h1>List of pieces in Chess</h1>
+                    <h2 id="number">0</h2>
+                    <script type="text/javascript">
+                        const headerTag = document.getElementById('number');
+                        headerTag.addEventListener('numberChanged', function (e) {
+                            headerTag.textContent = e.detail.number;
+                            headerTag.style.color = e.detail.textColor;
+
+                            
+                        }
+                        function changeNumber (n, c) {
+                            const event = new CustomEvent('numberChanged', {
+                                detail: {
+                                    number: n,
+                                    textColor: c
+                                }
+                            });
+
+                            headerTag.dispatchEvent(event);
+                        }
+
+                    </script>
+                        <p>
+                            <a href="https://www.chess.com/terms/chess-pawn">Pawn</a>
+                        </p>
+                        <p>
+                            <a href="https://www.chess.com/terms/chess-king">King</a>
+                        </p>
+                        <p>
+                            <a href="https://www.chess.com/terms/chess-queen">Queen</a>
+                        </p>
+                        <p>
+                            <a href="https://www.chess.com/terms/chess-bishop">Bishop</a>
+                        </p>
+                        <p>
+                            <a href="https://www.chess.com/terms/chess-Knight">Knight</a>
+                        </p>
+                        <p>
+                            <a href="https://www.chess.com/terms/chess-Rook">Rook</a>
+                        </p>
+
+
+        
+
+                    
+                </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            </body>
+        </head>
+ 
+        </div>
+    
+</body>
+</html>

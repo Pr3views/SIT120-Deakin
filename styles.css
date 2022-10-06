@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+*{
+  margin:0;
+  padding:0;
+ }
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.container2 {
+  width: 80%;
+  margin: 50 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+.logo {
+  float: left;
+  text-align: left;
+}
+.image {
+  float: middle;
+  text-align: right;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+}
+
+.title{
+  font-size: 2.5em;
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-box-about-me{
+  width: 90%;
+  color: #fff;
+  position: top;
+  top: 25%;
+  left: 50%;
+  text-align: middle;
+  transform: translate(-25%, 50%);
+
+
+}
+
+.divv {
+  display: flex;
+  position: middle;
+}
+li {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  font-size: 0px;
+}
+
+.box {
+  margin: .5px;
+  width: 75px;
+  height: 75px;
+}
+.allimg {
+  width: 45px;
+  position: relative;
+  bottom: 5px;
+}
+
+.allpawn {
+  transform: scale(.7);
+}
+
+@media (max-width:650px){
+
+  #tog {
+      margin-bottom: 70px;
+
+  }
+
+  .box {
+      width: 11vw;
+      height: 11vw;
+  }
+
+  .allimg {
+      width: 7vw;
+  }
+}
+
+ul.my-list-style {
+  list-style-type:none;
+  color: #0000FF;
+  padding: 10px 20px;
+}
